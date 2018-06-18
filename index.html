@@ -18,7 +18,7 @@
 <script>
 /* Pages loads */
  $(document).ready(function(){
-    alert("Let's celebrate!\nReserve your event now!");
+    alert("\t\t\t\t\tLet's celebrate!\n\t\t\t\t\tReserve your event now!");
   });
 
 /* Datepicker jQuery code */
@@ -38,7 +38,7 @@ function Validate()
 	var msg = "Please enter your name";
 	var msg1 = "Please enter your email address";
 	var msg2 = "Please enter your comments";
-  	var msg3 = "Please enter your last name";
+    var msg3 = "Please enter your last name";
 
 
 // create variables to hold form data entered by user
@@ -46,7 +46,7 @@ function Validate()
 // get the value entered of a particular id variable (name, email, comment)
 
 	var name1 = document.getElementById("name").value;
-  	var name2 = document.getElementById("lname").value;
+    var name2 = document.getElementById("lname").value;
 	var email1 = document.getElementById("email").value;
 	var comments1= document.getElementById("comments").value;
 	
@@ -94,7 +94,7 @@ if (email1 == "" || email1 == null)
 
 
 <style>
- 
+
 
 body {
     background: url("wallpaper.jpg");
@@ -108,7 +108,7 @@ body {
     width:610px;
   	margin: 0px auto; padding: 12px;
     text-align: left; /* Counteract to IE/Win Hack */	
-	background-color:#f5f5dc;
+	  background-color:#f5f5dc;
     opacity: 0.75;
     filter: alpha(opacity=75); /* For IE8 and earlier */
 }    
@@ -148,6 +148,7 @@ img.i {float: right;}
 td.tab {
 	font-size: 10pt;
 	padding: 3px;
+	padding-right: 35px;
 }
 
 .f 
@@ -175,9 +176,7 @@ td.tab {
 	margin: 0 auto;
 }
 
-#drop {
-	text-align: center;
-}
+
 
 #comments {
 	margin-left: 90px;
@@ -189,6 +188,14 @@ td.tab {
 
 .special {
 	text-align: center;
+}
+
+#entertainment {
+  margin-left: 30px;
+}
+
+#party {
+  margin-left: 90px;
 }
 
 </style> 
@@ -236,28 +243,27 @@ The information that you enter will open an email with your form information in 
 <br>
 
 <b>Date of Reservation:</b>
-<input type="text" id="datepicker" name="todays_date" value="click here" size="8">
+<input type="text" id="datepicker" name="Todays Date" value="click here" size="8">
 <br><br>
 
 <div id="drop">
 <b>People Attending:</b> 
-<select name="status">
+<select name="Status">
 <option value=" ">-Choose one-</option>
-<option value="student">0-20</option>
-<option value="teacher">20-40</option>
-<option value="web_designer">40-60</option>
-<option value="programmer">80-100</option>
+<option value="0-20 people">0-20</option>
+<option value="20-40 people">20-40</option>
+<option value="40-60 people">40-60</option>
+<option value="80-100 people">80-100</option>
 <option value="other">Other</option>
 </select>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<b>Party Occasion: </b>
-<select name="party">
+<span id='party'><b>Party Occasion: </b></span>
+<select name="Party">
 <option value=" ">-Choose one-</option>
-<option value="dem">Birthday</option>
-<option value="rep">Wedding</option>
-<option value="green">Retirement</option>
-<option value="independent">Company</option>
+<option value="birthday">Birthday</option>
+<option value="wedding">Wedding</option>
+<option value="retirement">Retirement</option>
+<option value="company">Company</option>
 <option value="other">Other</option>
 </select>
 </div>
@@ -266,30 +272,31 @@ The information that you enter will open an email with your form information in 
 <br>
 <b>Entertainment: </b><span class="s">($100 additional cost per selection)</span><br>
 
+<div id='entertainment'>
 <table>
-
 <tr>
 
-<td class="tab"><input type="checkbox" name="interest" value="web_design">Fireworks</td>
+<td class="tab"><input type="checkbox" name="Entertainment" value="fireworks">Fireworks</td>
 
-<td class="tab"><input type="checkbox" name="interest"  value="internet_training">Stand-Up Comedy</td>
+<td class="tab"><input type="checkbox" name="Entertainment"  value="stand-up comedy">Stand-Up Comedy</td>
 
-<td class="tab"><input type="checkbox"  name="interest" value="networks">Magician</td>
+<td class="tab"><input type="checkbox"  name="Entertainment" value="magician">Magician</td>
 
-<td class="tab"><input type="checkbox"  name="interest" value="unix">Pool</td>
+<td class="tab"><input type="checkbox"  name="Entertainment" value="pool">Pool</td>
 </tr>
 
 <tr>
-<td class="tab"><input type="checkbox"  name="interest" value="cisco">Ferris Wheel</td>
+<td class="tab"><input type="checkbox"  name="Entertainment" value="ferris wheel">Ferris Wheel</td>
 
-<td class="tab"><input type="checkbox"  name="interest" value="programming">Rock Climbing</td>
+<td class="tab"><input type="checkbox"  name="Entertainment" value="rock climbing">Rock Climbing</td>
 
-<td class="tab"><input type="checkbox"  name="interest" value="critical_thinking">Bumper Cars</td>
+<td class="tab"><input type="checkbox"  name="Entertainment" value="bumper cars">Bumper Cars</td>
 
-<td class="tab"><input type="checkbox"  name="interest" value="philosopht">Ballon Drop</td>
+<td class="tab"><input type="checkbox"  name="Entertainment" value="ballon drop">Ballon Drop</td>
+
 </tr>
 </table>
-
+</div>
 
 <br>
 <b>Select Dessert: </b><span class="s">(Choose only one)</span><br>
@@ -298,18 +305,18 @@ The information that you enter will open an email with your form information in 
 <table id="radio">
 <tr>
 
-<td class="tab"><input type="radio" name="fan" value="Giants">Cream Brulee</td>
+<td class="tab"><input type="radio" name="Dessert" value="cream brulee">Cream Brulee</td>
 
 
-<td class="tab"><input type="radio" name="fan" value="49ers">Ice Cream</td>
+<td class="tab"><input type="radio" name="Dessert" value="ice cream">Ice Cream</td>
 
-<td class="tab"><input type="radio" name="fan" value="Athletics">Cheesecake</td>
+<td class="tab"><input type="radio" name="Dessert" value="cheesecake">Cheesecake</td>
 
-<td class="tab"><input type="radio" name="fan" value="Raiders">Apple Pie</td>
+<td class="tab"><input type="radio" name="Dessert" value="apple pie">Apple Pie</td>
 
-<td class="tab"><input type="radio" name="fan" value="Warriors">Brownie</td>
+<td class="tab"><input type="radio" name="Dessert" value="brownie">Brownie</td>
  
-<td class="tab"><input type="radio" name="fan" value="None">None of these</td>
+<td class="tab"><input type="radio" name="Dessert" value="none">None of these</td>
 
 </tr>
 </table>
@@ -317,7 +324,7 @@ The information that you enter will open an email with your form information in 
 
 <p class="special" style="font-size: 16px;"><b>Special Requests</b></p>
 
-<textarea id="comments" rows="6" cols="71"></textarea><br>
+<textarea id="comments" rows="6" cols="71" name="Comments"></textarea><br>
 <div class="requests">
 <input type="submit" value="SUBMIT"  onclick="return Validate(this.form)">
 
